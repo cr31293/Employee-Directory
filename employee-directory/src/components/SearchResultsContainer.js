@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import SearchForm from "./SearchForm";
-import ResultList from "./ResultList";
 import EmployeeCard from "./EmployeeCard";
 import API from "../utils/API";
+import GridList from '@material-ui/core/GridList';
 
 class SearchResultContainer extends Component {
     state = {
         search: "",
         results: [],
-        name: []
+        // name: []
     };
 
     componentDidMount() {
@@ -22,8 +22,8 @@ class SearchResultContainer extends Component {
     }
 
     handleInputChange = event => {
+        let value = event.target.value;
         const name = event.target.name;
-        const value = event.target.value;
         this.setState({
             [name]: value
         });
@@ -34,14 +34,40 @@ class SearchResultContainer extends Component {
         this.searchEmployees(this.state.search);
     };
 
+    // sortGender = () => {
+    //     this.setState({
+    //         results: 
+    //     })
+    // }
+
     render() {
         return (
             <div>
                 <SearchForm
                 search={this.state.search}
                 handleFormSubmit={this.handleFormSubmit}
+                handleInputChange={this.handleInputChange}
                 />
-                <EmployeeCard results={this.state.results} />
+                <GridList>
+                {this.state.results
+                .filter(
+                    user => 
+                        user.name.first.toLowerCase()
+                        .includes(this.state.search.toLowerCase()) || 
+                        user.name.last.toLowerCase()
+                        .includes(this.state.search.toLowerCase()) ||
+                        user.email.toLowerCase()
+                        .includes(this.state.search.toLowerCase())
+                ).map(users => (
+                <EmployeeCard 
+                    thumbnail={users.picture.large}
+                    gender={users.gender}
+                    firstName={users.name.first}
+                    lastName={users.name.last}
+                    email={users.email}
+                 />
+                ))}
+                </GridList>
             </div>
         )
     }
