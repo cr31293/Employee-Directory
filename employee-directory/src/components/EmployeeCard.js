@@ -2,10 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -47,19 +45,15 @@ const classes = useStyles();
           <Typography gutterBottom variant="h5" component="h2">
             {props.firstName} {props.lastName}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Email: {props.email}
+          <Typography color="textPrimary">
+            <ul>
+              <li>Age: {props.age}</li> 
+              <li>Location: {props.city}, {props.state}, {props.country}</li>
+              <li>Email: {props.email}</li>
+            </ul>
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
       </Card>
 
     </>)

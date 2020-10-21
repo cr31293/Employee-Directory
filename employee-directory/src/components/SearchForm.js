@@ -4,9 +4,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import AccountCircle from "@material-ui/icons/AccountCircle"
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/styles";
-import { green, red } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
     bar: {
@@ -18,7 +17,7 @@ function SearchForm(props) {
     const classes = useStyles();
     return (
         <div>
-            <FormControl  className="results" fullWidth>
+            <FormControl fullWidth>
                 <InputLabel htmlFor="input-with-icon-adornment"></InputLabel>
                 <Input 
                     id="results"
@@ -34,15 +33,9 @@ function SearchForm(props) {
                     type="text"
                     placeholder="Search for a specific employee here"
                 />
-                {/* <datalist id="results">
-                    {props.results.map(results => {
-                        <option value={results} key={results} />
-                    })}
-                </datalist> */}
-                <Button className={classes.bar} type="submit" variant="outlined" color="primary" onClick={props.handleFormSubmit}>
-                    Search
-                </Button>
+
             </FormControl>
+
         </div>
     );
 }
