@@ -17,7 +17,7 @@ This application uses the randomuser.me API to generate an employee directory co
 
 ## Installation
 
-This application can be viewed via GitHub Pages at ___ or the GitHub repo is available at https://github.com/cr31293/Employee-Directory
+This application can be viewed via GitHub Pages at https://cr31293.github.io/Employee-Directory/ or the GitHub repo is available at https://github.com/cr31293/Employee-Directory
 
 
 ## Usage
