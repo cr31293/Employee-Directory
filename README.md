@@ -12,12 +12,12 @@
 
 ## Description
 
-This application uses the randomuser.me API to generate an employee directory containing employees, their locations, ages, and contact information. The app features a search bar to dynamically search for individual employees by first name, last name, and email, as well as filtering by employee age. This application is created using React and hosted on Heroku.
+This application uses the randomuser.me API to generate an employee directory containing employees, their locations, ages, and contact information. The app features a search bar to dynamically search for individual employees by first name, last name, and email, as well as filtering by employee age. This application is created using React and hosted on GitHub.
 
 
 ## Installation
 
-This application can be viewed via Heroku at https://shrouded-taiga-29638.herokuapp.com/ or the GitHub repo is available at https://github.com/cr31293/Employee-Directory
+This application can be viewed via GitHub Pages at ___ or the GitHub repo is available at https://github.com/cr31293/Employee-Directory
 
 
 ## Usage
