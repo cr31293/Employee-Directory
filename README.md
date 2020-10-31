@@ -24,6 +24,11 @@ This application can be viewed via GitHub Pages at https://cr31293.github.io/Emp
 
 This application showcases app building using React. Custom component building, props, state, filtering, and sorting are all covered, as well as Material-UI, which is used to provide styling. 
 
+</br>
+
+![Employee-Direcotry.gif](./assets/images/Employee-Directory.gif)
+
+</br>
 
 ## Contributions
 
